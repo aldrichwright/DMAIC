@@ -1,0 +1,209 @@
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="..//..//static/hamburger.css" rel="stylesheet" />
+  <link href="..//../static//themeInitial.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script> 
+ 
+
+   <title>Er</title>
+</head>
+  
+<body >
+<table>
+  <tr>
+    <td><div><h3>Log In</h3></div>     
+    <td>
+      <div>
+        <img src="..//..//static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />         
+      </div>  
+    </td>
+      <td><div><h3>Main</h3></div>                
+      <td>  
+      <div>
+        <img src="..//..//static/loggedIn.png", alt='Main'  onclick='location.href = "/LoggedIn"'  />
+        </div>
+    </td> 
+    <td><div><h3>Help</h3></div></td>
+    <td>
+      <div>
+         <img class="p-image--bordered" src="../../static//DMAICCycle.png", alt="Company Logo" onclick='location.href = "/help"'  />
+        </div>
+      </td>   
+     <td>
+        <div>
+         <h2> Data Quality Project </h2>
+         </div>
+        </td>       
+        <td>
+          <div>
+           <h2> Systems Documentation -Projects ERD </h2>
+           </div>
+          </td>  
+  </tr>
+</table>
+<br>   
+<sl-breadcrumb>
+<sl-breadcrumb-item href=/>
+  Log In</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/LoggedIn>
+  Main</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/Documentation>
+    Documentation</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/getErPhaseArtifact>
+    Projects Er Diagram</sl-breadcrumb-item>   
+     
+</sl-breadcrumb>  
+<br>
+<nav id="main-menu">
+  <ul>
+    <li><a href=/Admin>Admin</a></li>
+    <li><a href=/MainDMAIC>DMAIC</a></li>
+    <li><a href=/Project>Project</a></li>
+    <li><a href=/Change>Change Password</a></li>
+    <li><a href=/Logout>Logout</a></li>
+    <li><a href=/Documentation>Docs</a></li>
+</ul>            
+</nav>    
+
+<input type="checkbox" id="hamburger-input" class="burger-shower" />
+<label id="hamburger-menu" for="hamburger-input">
+<nav id="sidebar-menu">
+  <h3>Menu</h3>
+  <ul>
+    <li><a href=/Admin>Admin</a></li>               
+    <li><a href=/MainDMAIC>DMAIC</a></li>
+    <li><a href=/Project>Project</a></li>
+    <li><a href=/Change>Change Password</a></li>
+    <li><a href=/Logout>Logout</a></li>
+    <li><a href=/Documentation>Docs</a></li>
+  </ul>
+</nav>
+</label> 
+<br>   
+
+          <div class="mermaid">
+          %%{init: {'theme':'forest'}}%%
+erDiagram
+Sprint_len_cd ||--o{ Agile_Project : Agile_Project
+  Project ||--o{ Agile_Project : Agile_Project
+  Project ||--o{ Data_Quality_Project : Data_Quality_Project
+  Quality_Project_Type ||--o{ Data_Quality_Project : Data_Quality_Project
+  org ||--o{ Employee : Employee
+  Employee_security_Role ||--o{ Employee : Employee
+  Function_Type ||--o{ Employee_Function : Employee_Function
+  Employee ||--o{ Employee_Function : Employee_Function
+  Project_Role ||--o{ Employee_role : Employee_role
+  Employee ||--o{ Employee_role : Employee_role
+  Project ||--o{ Employee_role : Employee_role
+  org ||--o{ Project : Project
+  Project_typ_cd ||--o{ Project : Project
+  User ||--o{ Project : Project
+  Project ||--o{ Traditional_Project : Traditional_Project
+  Employee ||--o{ User : User
+  Company ||--o{ org : org
+  org ||--o{ org : org
+  
+  Agile_Project { INTEGER Project_Id
+  INTEGER Default_Sprint_len_cd
+   } 
+  
+  
+  Company { INTEGER Company_Id
+  VARCHAR(100) Company_nm
+   } 
+  
+  
+  Data_Quality_Project { INTEGER Project_Id
+  VARCHAR(5) Quality_Project_Type_cd
+   } 
+  
+  
+  Employee { INTEGER Employee_Id
+  INTEGER org_Id
+  VARCHAR(100) Employee_fst_nm
+  VARCHAR(100) Employee_lst_nm
+   } 
+  
+  
+  Employee_Function { INTEGER Function_Id
+  INTEGER Employee_Id
+  DATE Start_dt
+  DATE End_dt
+   } 
+  
+  
+  Employee_role { INTEGER Project_Role_Id
+  INTEGER Employee_Id
+  INTEGER Project_Id
+   } 
+  
+  
+  Function_Type { INTEGER Function_Id
+  VARCHAR(100) Function_desc
+   } 
+  
+  
+  Project { INTEGER Project_Id
+  INTEGER org_Id
+  CHAR(10) Project_typ_cd
+  VARCHAR(100) Project_nm
+  VARCHAR(200) Project_desc
+  INTEGER Create_User_Id
+   } 
+  
+  
+  Project_Role { INTEGER Project_Role_Id
+   } 
+  
+  
+  Project_typ_cd { CHAR(10) Project_typ_cd
+  VARCHAR(100) Project_typ_cd_desc
+   } 
+  
+  
+  Quality_Project_Type { VARCHAR(5) Quality_Project_Type_cd
+  VARCHAR(100) Quality_Project_Type_desc
+   } 
+  
+  
+  Sprint_len_cd { INTEGER Sprint_len_cd
+  INTEGER Sprint_Week_len_No
+   } 
+  
+  
+  Traditional_Project { INTEGER Project_Id
+   } 
+  
+  
+  User { INTEGER User_Id
+  VARCHAR(12) Password
+  INTEGER Employee_Id
+  VARCHAR(12) User_No
+   } 
+  
+  
+  org { INTEGER org_Id
+  INTEGER Company_Id
+  INTEGER Parent_org_Id
+  VARCHAR(100) org_nm
+   } 
+  
+   
+
+         </div>   
+ 
+<script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>

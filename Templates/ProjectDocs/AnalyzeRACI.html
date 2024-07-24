@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="..//..//static/hamburger.css" rel="stylesheet" />
+  <link href="..//../static//themeInitial.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script> 
+ 
+
+   <title>Er</title>
+</head>
+  
+<body >
+<table>
+  <tr>
+    <td><div><h3>Log In</h3></div>     
+    <td>
+      <div>
+        <img src="..//..//static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />         
+      </div>  
+    </td>
+      <td><div><h3>Main</h3></div>                
+      <td>  
+      <div>
+        <img src="..//..//static/loggedIn.png", alt='Main'  onclick='location.href = "/LoggedIn"'  />
+        </div>
+    </td> 
+    <td><div><h3>Help</h3></div></td>
+    <td>
+      <div>
+         <img class="p-image--bordered" src="../../static//DMAICCycle.png", alt="Company Logo" onclick='location.href = "/help"'  />
+        </div>
+      </td>   
+     <td>
+        <div>
+         <h2> Data Quality Project </h2>
+         </div>
+        </td>       
+        <td>
+          <div>
+           <h2> Systems Documentation - Raci ERD </h2>
+           </div>
+          </td>  
+  </tr>
+</table>
+<br>   
+<sl-breadcrumb>
+<sl-breadcrumb-item href=/>
+  Log In</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/LoggedIn>
+  Main</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/Documentation>
+    Documentation</sl-breadcrumb-item>
+<sl-breadcrumb-item href=/getErRaci>
+    Raci Er Diagram</sl-breadcrumb-item>   
+     
+</sl-breadcrumb>  
+<br>
+<nav id="main-menu">
+  <ul>
+    <li><a href=/Admin>Admin</a></li>
+    <li><a href=/MainDMAIC>DMAIC</a></li>
+    <li><a href=/Project>Project</a></li>
+    <li><a href=/Change>Change Password</a></li>
+    <li><a href=/Logout>Logout</a></li>
+    <li><a href=/Documentation>Docs</a></li>
+</ul>            
+</nav>    
+
+<input type="checkbox" id="hamburger-input" class="burger-shower" />
+<label id="hamburger-menu" for="hamburger-input">
+<nav id="sidebar-menu">
+  <h3>Menu</h3>
+  <ul>
+    <li><a href=/Admin>Admin</a></li>               
+    <li><a href=/MainDMAIC>DMAIC</a></li>
+    <li><a href=/Project>Project</a></li>
+    <li><a href=/Change>Change Password</a></li>
+    <li><a href=/Logout>Logout</a></li>
+    <li><a href=/Documentation>Docs</a></li>
+  </ul>
+</nav>
+</label> 
+<br> 
+<h3>Analyze</h3>
+
+<div class="mermaid">
+  %%{init: {'theme':'forest'}}%%
+  erDiagram
+  Artifact_Type_cd ||--o{ Artifact : Artifact
+    Project ||--o{ Data_Quality_Project : Data_Quality_Project
+    Quality_Project_Type ||--o{ Data_Quality_Project : Data_Quality_Project
+    Quality_Project_Type ||--o{ Phase : Phase
+    Phase ||--o{ Phase_Artifact : Phase_Artifact
+    Artifact ||--o{ Phase_Artifact : Phase_Artifact
+    org ||--o{ Project : Project
+    Project_typ_cd ||--o{ Project : Project
+    User ||--o{ Project : Project
+    Project ||--o{ Project_Artifact : Project_Artifact
+    Phase_Artifact ||--o{ Project_Artifact : Project_Artifact
+    Data_Quality_Project ||--o{ Project_Artifact : Project_Artifact
+    Approval_Stage_cd ||--o{ Project_Artifact : Project_Artifact
+    Artifact ||--o{ RACI : RACI
+    RACI ||--o{ RACI_Detail : RACI_Detail
+    RACI_Detail ||--o{ RACI_Detail_Role : RACI_Detail_Role
+    RACI_Type_cd ||--o{ RACI_Detail_Role : RACI_Detail_Role
+    RACI ||--o{ RACI_Detail_Role : RACI_Detail_Role
+    
+    Artifact { INTEGER Artifact_Id
+    CHAR(15) Artifact_Type_cd
+    VARCHAR(100) Artifact_nm
+     } 
+    
+    
+    Data_Quality_Project { INTEGER Project_Id
+    VARCHAR(5) Quality_Project_Type_cd
+     } 
+    
+    
+    Phase { VARCHAR(100) Phase_nm
+    INTEGER Phase_Id
+    INTEGER Quality_Project_Type_cd
+     } 
+    
+    
+    Phase_Artifact { INTEGER Phase_Id
+    INTEGER Artifact_Id
+     } 
+    
+    
+    Project { INTEGER Project_Id
+    INTEGER org_Id
+    CHAR(10) Project_typ_cd
+    VARCHAR(100) Project_nm
+    VARCHAR(200) Project_desc
+    INTEGER Create_User_Id
+     } 
+    
+    
+    Project_Artifact { INTEGER Artifact_Id
+    INTEGER Phase_Id
+    INTEGER Project_Id
+    CHAR(10) Approval_Stage_cd
+     } 
+    
+    
+    Quality_Project_Type { VARCHAR(5) Quality_Project_Type_cd
+    VARCHAR(100) Quality_Project_Type_desc
+     } 
+    
+    
+    RACI { INTEGER Artifact_Id
+     } 
+    
+    
+    RACI_Detail { INTEGER Artifact_Id
+    INTEGER Sequence_No
+    VARCHAR(50) Task_nm
+     } 
+    
+    
+    RACI_Detail_Role { INTEGER Artifact_Id
+    INTEGER Sequence_No
+    VARCHAR(50) Task_nm
+    VARCHAR(50) Role_nm
+    CHAR(10) RACI_Type_cd
+     } 
+    
+    
+    RACI_Type_cd { CHAR(10) RACI_Type_cd
+    VARCHAR(100) RACI_Type_desc
+     } 
+    
+       
+    
+    
+</div>
+  
+
+
+ 
+ <!-- SCRIPT -->
+ <script type="module">
+   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+   mermaid.initialize({ startOnLoad: true });
+ </script>
+</body>
+</html>
