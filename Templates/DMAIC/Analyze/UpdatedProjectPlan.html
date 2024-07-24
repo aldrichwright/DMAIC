@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="../../../static/hamburger.css" rel="stylesheet" />
+  <link href="../../../static/themeInitial.css" rel="stylesheet" />  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/shoelace-autoloader.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+
+   <title>Updated Project Plan</title>
+</head>
+  
+<body >
+  <table>
+  <tr>
+    <td><div><h3>Log In</h3></div>     
+    <td>
+      <div>
+        <img src="../../../static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />         
+      </div>  
+    </td>
+      <td><div><h3>Main</h3></div>                
+      <td>  
+      <div>
+        <img src="../../../static/loggedIn.png", alt='Main'  onclick='location.href = "/LoggedIn"'  />
+        </div>
+    </td> 
+    <td><div><h3>Help</h3></div></td>
+    <td>
+      <div>
+         <img class="p-image--bordered" src="../../../static/DMAICCycle.png", alt="Company Logo" onclick='location.href = "/help"'  />
+        </div>
+      </td>   
+     <td>
+        <div>
+         <h2> Data Quality Project </h2>
+         </div>
+        </td>       
+        <td>
+          <div>
+           <h2> DMAIC -Analyze/ Updated Project Plan</h2>
+           </div>
+          </td>  
+  </tr>
+</table>
+<br>   
+<sl-breadcrumb>
+  <sl-breadcrumb-item href=/>
+    Log In</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/LoggedIn>
+    Main</sl-breadcrumb-item>
+    <sl-breadcrumb-item href=/MainDMAIC>
+      Main DMAIC</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/DMAIC>
+   DMAIC</sl-breadcrumb-item>
+   <sl-breadcrumb-item href=/Analyze>
+    Analyze</sl-breadcrumb-item>
+    <sl-breadcrumb-item href=/getanUpdatedProjectPlan>
+        Updated Project Plan</sl-breadcrumb-item> 
+</sl-breadcrumb>  
+<br>
+<br>                    
+ </div>
+ </table>
+ <sl-tab-group placement="start">
+    <sl-tab slot="nav" panel="general">General Project Information</sl-tab>
+    <sl-tab slot="nav" panel="Team">Team Members</sl-tab>
+    <sl-tab slot="nav" panel="Scope">Scope</sl-tab>
+    <sl-tab slot="nav" panel="Budget">Budget</sl-tab>
+    <sl-tab slot="nav" panel="Risk">Risk</sl-tab>
+    <sl-tab slot="nav" panel="Communication">Communication Plan </sl-tab>
+    <sl-tab slot="nav" panel="Timeline">Timeline </sl-tab>
+  
+    <sl-tab-panel name="general">
+        <table>
+          <tr>
+              <td colspan="2" style="font-size: medium;">Project Plan</td>
+            </tr>
+          <tr>
+              <td colspan="2" style="background-color: lightblue;font-size: medium;">General Project Information</td>
+            </tr>
+          <tr>                   
+              <td><label for="ProjectName">Project Name:</label></td>
+              <td><input type="text" id="ProjectName" name="ProjectName"></td>
+          </tr>
+          <tr>
+              <td> <br> <br>
+                  <label for="ProjectSponsor">Project Sponsors:
+                  &nbsp
+                  <br>&nbsp
+                  <br>&nbsp
+              </label></td>    
+              <td>
+                  <sl-select multiple clearable>
+                      <sl-option value="MelissaRosenberg"> Melissa Rosenberg</sl-option>
+                      <sl-option value="EricChacon"> Eric Chacon</sl-option>
+                      <sl-option value="MarcoChacon">Marco Chacon</sl-option>
+                  </sl-select>
+              </td>                 
+          </tr>
+          <tr>
+              <td><label for="Impact">Impact:<br>
+                  &nbsp
+                  <br>&nbsp
+                  <br>&nbsp
+              </label></td>    
+              <td><textarea id="Impact" name="Impact" rows="6" cols="50"></textarea></td>                    
+          </tr> 
+        </table>
+
+    </sl-tab-panel>
+    <sl-tab-panel name="Team">
+      <table>
+      <tr>        
+        <td colspan="2" style="font-size: medium;background-color: lightblue;">
+          Project Team
+        </td>
+      </tr>
+    <tr>
+        <td> <br> <br>
+            <label for="ProjectManager">Project Manager:<br>
+            &nbsp
+            <br>&nbsp
+            <br>&nbsp
+          </label>
+        </td>    
+        <td>
+            <sl-select>
+                <sl-option value="ThomasSmith"> Thomas Smith</sl-option>
+                <sl-option value="Jill Thompson"> Jill Thompson</sl-option>
+            </sl-select>
+        </td>
+    </tr> 
+    <tr>
+        <td> <br> <br>
+            <label for="Team Members">Team Members:<br>
+            &nbsp
+            <br>&nbsp
+            <br>&nbsp
+        </label></td>    
+        <td>
+            <sl-select multiple clearable>
+                <sl-option value="MelissaRosenberg"> Melissa Rosenberg</sl-option>
+                <sl-option value="EricChacon"> Eric Chacon</sl-option>
+                <sl-option value="MarcoChacon">Marco Chacon</sl-option>
+            </sl-select>
+        </td>
+    </tr>  
+  </table>
+    </sl-tab-panel>
+    <sl-tab-panel name="Scope">
+      <table>
+      <tr>
+        <td colspan="2" style="background-color: lightblue;font-size: medium;">Project Scope Statement</td>
+      </tr> 
+      <tr>
+        <td><label for="Purpose">Project Purpose/Business Justification:<br>
+            &nbsp
+            <br>&nbsp
+            <br>&nbsp
+        </label></td>    
+        <td><textarea id="Purpose" name="Purpose" rows="6" cols="50"></textarea></td>                    
+    </tr>   
+    <tr>
+        <td><label for="Objectives">Objectives:<br>
+            &nbsp
+            <br>&nbsp
+            <br>&nbsp
+        </label></td>    
+        <td><textarea id="Objectives" name="Objectives" rows="6" cols="50"></textarea></td>                    
+    </tr> 
+    <tr>
+        <td><label for="Deliverables">Deliverables:<br>
+            &nbsp
+            <br>&nbsp
+            <br>&nbsp
+        </label></td>    
+        <td><textarea id="Deliverables" name="Deliverables" rows="6" cols="50"></textarea></td>                    
+    </tr>   
+</tr> 
+<tr>
+    <td><label for="Scope">Scope:<br>
+        &nbsp
+        <br>&nbsp
+        <br>&nbsp
+    </label></td>    
+    <td><textarea id="Scope" name="Scope" rows="6" cols="50"></textarea></td>                    
+</tr>
+<tr>
+    <td> <label for="Milestones">Milestones:<br>
+        &nbsp
+        <br>&nbsp
+        <br>&nbsp
+    </label></td>    
+    <td><textarea id="Milestones" name="Milestones" rows="6" cols="50"></textarea></td>                    
+
+   </tr>          
+   <tr>
+    <td> <label for="Constraints">Constraints:<br>
+        &nbsp
+        <br>&nbsp
+        <br>&nbsp
+    </label></td>    
+    <td><textarea id="Constraints" name="Constraints" rows="6" cols="50"></textarea></td>                    
+   </tr>
+    </table>
+  </sl-tab-panel>
+    <sl-tab-panel name="Budget">
+      <table>
+        <tr>
+          <td colspan="4" style="background-color: lightblue;font-size: medium;">Budget,Forecast and Actuals </td>
+        </tr>
+        <tr>
+          <th>
+            <h3>
+             Time Period 
+            </h3> 
+          </th>
+          <th>
+            <h3>
+            Budget 
+          </h3>
+         </th>
+         <th>
+        <h3>
+          Actual 
+        </h3> 
+         </th>
+         <th>
+        <h3>
+          Forecast
+        </h3>  
+         </th>
+        </tr> 
+        <tr>
+          <td style="font-size: 14px;width: 200px">
+            January 2024
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 14px;width: 200px">
+            February 2024
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 14px;width: 200px">
+            March 2024
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $0
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 14px;width: 200px">
+            April 2024
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $200,000
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $0
+          </td>
+          <td style="font-size: 14px;width: 100px; text-align: right;">
+            $0
+          </td>
+        </tr>
+        </table>
+    </sl-tab-panel>
+    <sl-tab-panel name="Risk">
+    <table>
+    <tr>
+      <th style="font-size: 16px;">
+        Risk Name
+      </th>
+      <th style="font-size: 16px;">
+      Risk Impact (Hi, Med, Lo)   
+      </th>
+      <th style="font-size: 16px;">
+        Risk Likelihood (Hi, Med, Lo)   
+       </th>
+       <th style="font-size: 16px;">
+        Risk Mitigation   
+       </th>
+    </tr>
+    <tr>  
+        <td>
+          <br>
+          <input type="text" id="RiskName1" name="RiskName1">
+        </td> 
+        <td>    
+          <sl-select id = "impact1" label="Select Impact">
+            <sl-option value="option-1">Low</sl-option>
+            <sl-option value="option-2">Medium</sl-option>
+            <sl-option value="option-3">High</sl-option>
+          </sl-select>
+        </td>
+        <td>
+          <sl-select id = "likelihood1" label="Select likelihood">
+            <sl-option value="option-1">Low</sl-option>
+            <sl-option value="option-2">Medium</sl-option>
+            <sl-option value="option-3">High</sl-option>
+          </sl-select>
+        </td>
+        <td>
+          <br><br><br><br>
+          <textarea id="Mitigation1" name="Mitigation1" rows="4" cols="30">
+         </textarea>
+        </td>
+    </tr>
+    <tr>  
+      <td>
+        <br>
+        <input type="text" id="RiskName2" name="RiskName2">
+      </td> 
+      <td>    
+        <sl-select id = "impact2" label="Select Impact">
+          <sl-option value="option-1">Low</sl-option>
+          <sl-option value="option-2">Medium</sl-option>
+          <sl-option value="option-3">High</sl-option>
+        </sl-select>
+      </td>
+      <td>
+        <sl-select id = "likelihood2" label="Select likelihood">
+          <sl-option value="option-1">Low</sl-option>
+          <sl-option value="option-2">Medium</sl-option>
+          <sl-option value="option-3">High</sl-option>
+        </sl-select>
+      </td>
+      <td>
+        <br><br><br><br>
+        <textarea id="Mitigation2" name="Mitigation2" rows="4" cols="30">
+       </textarea>
+      </td>
+  </tr>
+</table>
+</sl-tab-panel>
+<sl-tab-panel name="Communication">
+  <table>
+    <tr>
+      <th style="font-size: 16px; width: 170px">
+        Communication
+      </th>
+      <th style="font-size: 16px; width: 170px">
+      Frequency
+      </th>
+      <th style="font-size: 16px; width: 170px">
+        Objective
+       </th>
+       <th style="font-size: 16px; width: 170px">
+        Owner
+       </th>
+       <th style="font-size: 16px;">
+        Audience
+       </th>
+    </tr>
+    <tr>
+      <td style="width: 170px">
+        <br>
+          <input type="text" id="TaskName1" name="TaskName1">
+        </td> 
+        <td style="font-size: 16px;">
+          <sl-select id = "Frequency1" label="Frequency">
+            <sl-option value="option-1">Daily</sl-option>
+            <sl-option value="option-2">Weekly</sl-option>
+            <sl-option value="option-3">Monthly</sl-option>
+            <sl-option value="option-4">Quarterly</sl-option>
+            <sl-option value="option-5">Yearly</sl-option>
+          </sl-select>
+        </td>
+      <td >        
+        <br><br><br><br>
+        <textarea id="Objective1" name="Objective1" rows="4" cols="30">
+       </textarea>
+       </td>
+       <td> 
+        <br>       
+        <input type="text" id="Owner1" name="Owner1">
+      </td>
+      <td>
+        <br>
+        <input type="text" id="Audience1" name="Audience1">
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 170px">
+        <br>
+          <input type="text" id="TaskName2" name="TaskName2">
+        </td> 
+        <td style="font-size: 16px;">
+          <sl-select id = "Frequency2" label="Frequency">
+            <sl-option value="option-1">Daily</sl-option>
+            <sl-option value="option-2">Weekly</sl-option>
+            <sl-option value="option-3">Monthly</sl-option>
+            <sl-option value="option-4">Quarterly</sl-option>
+            <sl-option value="option-5">Yearly</sl-option>
+          </sl-select>
+        </td>
+      <td >        
+        <br><br><br>
+        <textarea id="Objective2" name="Objective2" rows="4" cols="30">
+       </textarea>
+       </td>
+       <td> 
+    
+        <input type="text" id="Owner2" name="Owner2">
+      </td>
+      <td>
+        
+        <input type="text" id="Audience2" name="Audience2">
+      </td>
+    </tr>
+    </table>
+</sl-tab-panel>
+<sl-tab-panel name="Timeline">
+    <table>
+    <tr>
+    <th style="font-size: 16px; width: 170px">
+      Task Name
+    </th>
+    <th style="font-size: 16px; width: 170px">
+     Milestone?
+    </th>
+    <th style="font-size: 16px; width: 170px">
+      Planned Start Date
+     </th>
+     <th style="font-size: 16px; width: 170px">
+      Planned End Date
+     </th>
+     <th style="font-size: 16px; width: 170px">
+      Assigned
+     </th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="task1" name="task1">
+      </td>
+      <td>
+        <input type="checkbox" id="milestone1" name="milestone1" value="milestone">
+      </td>
+      <td >
+        <input type="date" id="startdate1" name="startdate1">
+       </td>
+       <td >
+        <input type="date" id="enddate1" name="enddate1">
+       </th>
+       <td>
+        <input type="text" id="assigned1" name="assigned1">
+       </td>
+      </tr>    
+    </table>  
+    </sl-tab-panel>
+  </sl-tab-group>
+  
+  
+ <table>
+    <br>
+    <br>
+      <tr >
+          <td><button id="Submit" type="button" onclick="location.href='UptProjectPlan.html';">Submit</button></td>
+           <td><button id="Cancel" type="button">Cancel</button></td>
+           <td><button id="Help" type="button">Help</button></td>
+      </tr>       
+ </table>    
+  
+          
+         
+        
+        
+
+
+    </table>
+          <div class="overlay"></div>
+          <br>
+          <div class="container">
+
+
+           
+            <div>
+        
+        </div>
+
+  
+  <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+</body>
+</html>

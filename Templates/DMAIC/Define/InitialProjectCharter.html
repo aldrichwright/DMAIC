@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="../../../static/hamburger.css" rel="stylesheet" />
+  <link href="../../../static/themeInitial.css" rel="stylesheet" /> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/shoelace-autoloader.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+
+   <title>DMAIC</title>
+</head>
+  
+<body >
+  <table>
+  <tr>
+    <td><div><h3>Log In</h3></div>     
+    <td>
+      <div>
+        <img src="../../../static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />                 
+      </div>  
+    </td>
+      <td><div><h3>Main</h3></div>                
+      <td>  
+      <div>
+        <img src="../../../static/loggedIn.png", alt='Main'  onclick='location.href = "/loggedIn"'  />
+        </div>
+    </td> 
+    <td><div><h3>Help</h3></div></td>
+    <td>
+      <div>
+         <img class="p-image--bordered" src="../../../static/DMAICCycle.png", alt="Company Logo" onclick='location.href = "../../Help/help.html"'  />
+        </div>
+      </td>   
+     <td>
+        <div>
+         <h2> Data Quality Project </h2>
+         </div>
+        </td>       
+        <td>
+          <div>
+           <h2> DMAIC -Define/ Initial Project Charter</h2>
+           </div>
+          </td>  
+  </tr>
+</table>
+<br>   
+<sl-breadcrumb>
+  <sl-breadcrumb-item href=/>
+    Log In</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/LoggedIn>
+    Main</sl-breadcrumb-item>
+    <sl-breadcrumb-item href=/MainDMAIC>
+      Main DMAIC</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/DMAIC>
+   DMAIC</sl-breadcrumb-item>
+   <sl-breadcrumb-item href=/Define>
+    Define</sl-breadcrumb-item>
+    <sl-breadcrumb-item href=/GetDefProjCharter>
+        Initial Project Charter</sl-breadcrumb-item> 
+</sl-breadcrumb>  
+<br>
+<nav id="main-menu">
+    <ul>
+      <li><a href=/Admin>Admin</a></li>
+      <li><a href=/MainDMAIC>DMAIC</a></li>
+      <li><a href=/Project>Project</a></li>
+      <li><a href=/Change>Change Password</a></li>
+      <li><a href=/Logout>Logout</a></li>
+      <li><a href=/Documentation>Docs</a></li>
+  </ul>            
+  </nav>    
+  
+  <input type="checkbox" id="hamburger-input" class="burger-shower" />
+  <label id="hamburger-menu" for="hamburger-input">
+  <nav id="sidebar-menu">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href=/Admin>Admin</a></li>               
+      <li><a href=/MainDMAIC>DMAIC</a></li>
+      <li><a href=/Project>Project</a></li>
+      <li><a href=/Change>Change Password</a></li>
+      <li><a href=/Logout>Logout</a></li>
+      <li><a href=/Documentation>Docs</a></li>
+    </ul>
+  </nav>
+  </label>
+<br>                    
+    </div>
+
+        <br>
+          <table style="border-collapse: collapse; border: none">
+          <tr>
+         
+          <td>
+            
+            <div class="help" style="background-color:lightblue;vertical-align: text-top;">
+                <br>
+                <br>
+                <h3>Initial Project Charter</h3>
+                <br>
+                <br>
+                <br>
+                <p> The Initial Project Charter outlines a Process Improvement Project, including the goals and roles within the project.
+                    Sections within the Project Charter include:
+                    <br>
+                    <table>
+                        <th style="background-color: lightblue;"><h3>Section</h3></th>
+                        <th style="background-color: lightblue;"><h3>Description</h3></th>
+                        <tr>
+                            <td >
+                                Project Name
+                            </td>
+                            <td >
+                                the Name of the Data Quality Project
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                Project Sponsors
+                            </td >
+                            <td >
+                                the Business Sponsors of the Project
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                Business Case <br><br>
+                                &nbsp
+                            </td>
+                            <td >
+                                the Business Case for the Project. In other words, why is this project being done? 
+                                This may include the ROI, or measurements such as cycle time may be enough
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Project Manager  
+                            </td>
+                            <td>
+                                The Project Manager who will manage the Project 
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Team Members  
+                            </td>
+                            <td>
+                                The people who will work the Project 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Business Justification 
+                            </td>
+                            <td>
+                                The business reasons this project is being done, decreased expenses, reduced cycle time etc 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Objectives <br><br>
+                            </td>
+                            <td>
+                                The specific things to be achieved; reduce defects in a certain process by x percentage etc  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Deliverable <br><br>
+                            </td>
+                            <td>
+                                What will be delivered out of this project- changed processes and documentation, additional controls etc.  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Scope <br>
+                            </td>
+                            <td>
+                                What will and won't be improved; this process or business area and not that one etc.  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                              Constraints <br>
+                            </td>
+                            <td>
+                                Constraints on Project- Time, Budget, Personnel etc
+                            </td>
+                        </tr>
+                    </table>
+
+             </p>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>   
+           
+          </td>
+          <td>
+     
+
+             <table>
+                <tr>
+                    <td colspan="2" style="font-size: medium;">Project Charter</td>
+                  </tr>
+                <tr>
+                    <td colspan="2" style="background-color: lightblue;font-size: medium;">General Project Information</td>
+                  </tr>
+                <tr>                   
+                    <td><label for="ProjectName">Project Name:</label></td>
+                    <td><input type="text" id="ProjectName" name="ProjectName"></td>
+                </tr>
+                <tr>
+                    <td> <br> <br>
+                        <label for="ProjectSponsor">Project Sponsors:
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td>
+                        <sl-select multiple clearable>
+                            <sl-option value="MelissaRosenberg"> Melissa Rosenberg</sl-option>
+                            <sl-option value="EricChacon"> Eric Chacon</sl-option>
+                            <sl-option value="MarcoChacon">Marco Chacon</sl-option>
+                        </sl-select>
+                    </td>                 
+                </tr>
+                <tr>
+                    <td><label for="Impact">Impact:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td><textarea id="Impact" name="Impact" rows="6" cols="50"></textarea></td>                    
+                </tr> 
+                <tr>
+                    <td colspan="2" style="background-color: lightblue;font-size: medium;">Project Team</td>
+                  </tr>
+                <tr>
+                    <td> <br> <br>
+                        <label for="ProjectManager">Project Manager:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td>
+                        <sl-select>
+                            <sl-option value="ThomasSmith"> Thomas Smith</sl-option>
+                            <sl-option value="Jill Thompson"> Jill Thompson</sl-option>
+                        </sl-select>
+                    </td>
+                </tr> 
+                <tr>
+                    <td> <br> <br>
+                        <label for="Team Members">Team Members:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td>
+                        <sl-select multiple clearable>
+                            <sl-option value="MelissaRosenberg"> Melissa Rosenberg</sl-option>
+                            <sl-option value="EricChacon"> Eric Chacon</sl-option>
+                            <sl-option value="MarcoChacon">Marco Chacon</sl-option>
+                        </sl-select>
+                    </td>
+                </tr>  
+                <tr>
+                    <td colspan="2" style="background-color: lightblue;font-size: medium;">Project Scope Statement</td>
+                  </tr> 
+                  <tr>
+                    <td><label for="Purpose">Project Purpose/Business Justification:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td><textarea id="Purpose" name="Purpose" rows="6" cols="50"></textarea></td>                    
+                </tr>   
+                <tr>
+                    <td><label for="Objectives">Objectives:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td><textarea id="Objectives" name="Objectives" rows="6" cols="50"></textarea></td>                    
+                </tr> 
+                <tr>
+                    <td><label for="Deliverables">Deliverables:<br>
+                        &nbsp
+                        <br>&nbsp
+                        <br>&nbsp
+                    </label></td>    
+                    <td><textarea id="Deliverables" name="Deliverables" rows="6" cols="50"></textarea></td>                    
+                </tr>   
+            </tr> 
+            <tr>
+                <td><label for="Scope">Scope:<br>
+                    &nbsp
+                    <br>&nbsp
+                    <br>&nbsp
+                </label></td>    
+                <td><textarea id="Scope" name="Scope" rows="6" cols="50"></textarea></td>                    
+            </tr>
+            <tr>
+                <td> <label for="Milestones">Milestones:<br>
+                    &nbsp
+                    <br>&nbsp
+                    <br>&nbsp
+                </label></td>    
+                <td><textarea id="Milestones" name="Milestones" rows="6" cols="50"></textarea></td>                    
+            </tr>
+            
+
+                <td> <label for="Constraints">Constraints:<br>
+                    &nbsp
+                    <br>&nbsp
+                    <br>&nbsp
+                </label></td>    
+                <td><textarea id="Constraints" name="Constraints" rows="6" cols="50"></textarea></td>                    
+            </tr>            
+          <tr>
+           
+           
+         </table>
+         <table>
+            <tr >
+                  <td><button id="Submit" type="button" onclick="location.href='/Define';">Submit</button></td>
+                  <td><button id="Cancel" type="button">Cancel</button></td>
+                  <td><button id="Help" type="button">Help</button></td>
+           </tr>       
+   </table>    
+  
+          
+         
+        
+        
+
+
+    </table>
+          <div class="overlay"></div>
+          <br>
+          <div class="container">
+
+
+           
+            <div>
+        
+        </div>
+
+  
+  <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+</body>
+</html>

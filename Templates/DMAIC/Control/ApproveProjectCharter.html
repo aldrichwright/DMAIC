@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="../../../static/hamburger.css" rel="stylesheet" />
+  <link href="../../../static/themeInitial.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script> 
+
+
+   <title>Appove Project Charter</title>
+</head>
+  
+<body >
+      
+    
+        <table>
+          <tr>
+            <td><div><h3>Log In</h3></div>     
+            <td>
+              <div>
+                <img src="../../../static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />         
+              </div>  
+            </td>
+              <td><div><h3>Main</h3></div>                
+              <td>  
+              <div>
+                <img src="../../../static/loggedIn.png", alt='Main'  onclick='location.href = "/LoggedIn"'  />
+                </div>
+            </td> 
+            <td><div><h3>Help</h3></div></td>
+            <td>
+              <div>
+                 <img class="p-image--bordered" src="../../../static/DMAICCycle.png", alt="Company Logo" onclick='location.href = "/help"'  />
+                </div>
+              </td>   
+             <td>
+                <div>
+                 <h2> Data Quality Project </h2>
+                 </div>
+                </td>       
+                <td>
+                  <div>
+                   <h2> Updated Project Charter Approval </h2>
+                   </div>
+                  </td>  
+          </tr>
+        </table>
+        <br>   
+        <sl-breadcrumb>
+          <sl-breadcrumb-item href=/>
+            Log In</sl-breadcrumb-item>
+          <sl-breadcrumb-item href=/LoggedIn>
+            Main</sl-breadcrumb-item>
+            <sl-breadcrumb-item href=/MainDMAIC>
+              Main DMAIC</sl-breadcrumb-item>
+              <sl-breadcrumb-item href=/DMAIC>
+              DMAIC</sl-breadcrumb-item> 
+              <sl-breadcrumb-item href=/Control>
+                Control</sl-breadcrumb-item>    
+          <sl-breadcrumb-item href=/getanApprovedProjectCharter>
+           Initiate Project Charter Approval</sl-breadcrumb-item>
+        </sl-breadcrumb>  
+        <div width 100px class="Initial" id="Initial" >
+      </div>
+      <br>
+      <nav id="main-menu">
+        <ul>
+          <li><a href=/Admin>Admin</a></li>
+          <li><a href=/MainDMAIC>DMAIC</a></li>
+          <li><a href=/Project>Project</a></li>
+          <li><a href=/Change>Change Password</a></li>
+          <li><a href=/Logout>Logout</a></li>
+          <li><a href=/Documentation>Docs</a></li>
+      </ul>            
+      </nav>    
+      
+      <input type="checkbox" id="hamburger-input" class="burger-shower" />
+      <label id="hamburger-menu" for="hamburger-input">
+      <nav id="sidebar-menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href=/Admin>Admin</a></li>               
+          <li><a href=/MainDMAIC>DMAIC</a></li>
+          <li><a href=/Project>Project</a></li>
+          <li><a href=/Change>Change Password</a></li>
+          <li><a href=/Logout>Logout</a></li>
+          <li><a href=/Documentation>Docs</a></li>
+        </ul>
+      </nav>
+      </label> 
+      <br>
+      <h2> Initiate Project Charter Approval for: Project1 </h2>
+        <br>
+          <div class="overlay"></div>
+          <br>
+          <div class="container">
+
+            <div class="row" >
+                <div class="col-sm-4 col-md-6 col-lg-8" text-align="left" >
+                  <div class="help" style="background-color: lightblue;">
+                    <p>
+                        <h2>Help on Project Charter Initiate Approval</h2>
+                        <p>Select the Project Name from the Project DropDown.
+                          and then click on the Submit Button<br>
+                          This will then Initiate the Project Charter Approval Workflow
+                        </p>
+                    </p>
+                  </div> 
+                </div>
+
+                <div class="col-sm-8 col-md-6 col-lg-4 ">
+                  <br>
+
+
+                <table>
+                  <br>
+                  <br>
+                  <br>
+                         <tr >
+                               <td><button id="Submit" type="button" onclick="location.href='UptProjectCharter.html';">Submit</button></td>
+                               <td><button id="Cancel" type="button" onclick="location.href='../Measure.html';">Cancel</button></td>
+                               <td><button id="Help" type="button">Help</button></td>
+                        </tr>       
+                </table>    
+                    </div>
+         
+                    </div>
+                </div>
+           
+            <div>
+        
+        </div>
+    
+  
+  <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+</body>
+</html>

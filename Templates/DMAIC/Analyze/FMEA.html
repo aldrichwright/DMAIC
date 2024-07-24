@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <link href="../../../static/hamburger.css" rel="stylesheet" />
+  <link href="../../../static/themeInitial.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/shoelace-autoloader.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+
+   <title>FMEA</title>
+</head>
+  
+<body >
+  <table>
+  <tr>
+    <td><div><h3>Log In</h3></div>     
+      <td>
+        <div>
+          <img src="../../../static/DMAIC.png", alt="Company Logo" onclick='location.href = "/"'  />         
+        </div>  
+      </td>
+        <td><div><h3>Main</h3></div>                
+        <td>  
+        <div>
+          <img src="../../../static/loggedIn.png", alt='Main'  onclick='location.href = "/LoggedIn"'  />
+          </div>
+      </td> 
+      <td><div><h3>Help</h3></div></td>
+      <td>
+        <div>
+           <img class="p-image--bordered" src="../../../static/DMAICCycle.png", alt="Company Logo" onclick='location.href = "/help"'  />
+          </div>
+        </td>   
+     <td>
+        <div>
+         <h2> Data Quality Project </h2>
+         </div>
+        </td>       
+        <td>
+          <div>
+           <h2> DMAIC - Analysis/FMEA</h2>
+           </div>
+          </td>  
+  </tr>
+</table>
+<br>   
+<sl-breadcrumb>
+  <sl-breadcrumb-item href=/>
+    Log In</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/LoggedIn>
+    Main</sl-breadcrumb-item>
+    <sl-breadcrumb-item href=/MainDMAIC>
+      Main DMAIC</sl-breadcrumb-item>
+  <sl-breadcrumb-item href=/DMAIC>
+   DMAIC</sl-breadcrumb-item>
+   <sl-breadcrumb-item href=/Analyze>
+    Analyze</sl-breadcrumb-item>
+        <sl-breadcrumb-item href=/getanFMEA>
+           FMEA</sl-breadcrumb-item>    
+</sl-breadcrumb>  
+<br>
+<br>                    
+    </div>
+    <table style="border-collapse: collapse; border: none">
+      <tr>
+
+      
+      <!--https://goleansixsigma.com/data-collection-plan-->
+      <td>
+          <h3>
+              FMEA
+          </h3>             
+            <br>
+            <br>
+     
+          </h3>
+          
+          <table>
+            <tr>
+                <th style="font-size: 14px;">Process Function</th>
+                <th style="font-size: 14px;">Failure Mode</th>
+                <th style="font-size: 14px;">Effect</th>
+                <th style="font-size: 14px;">Severity</th>
+                <th style="font-size: 14px;">Mechanism</th>
+                <th style="font-size: 14px;">Occurs</th>
+                <th style="font-size: 14px;">Current Process</th>
+                <th style="font-size: 14px;">Detection</th>
+                <th style="font-size: 14px;">RPN</th>
+                <th style="font-size: 14px;">Recommended Action</th>
+                <th style="font-size: 14px;">Responsibility</th>
+                <th style="font-size: 14px;">Target Date</th>
+                <th style="font-size: 14px;">Action</th>
+                <th style="font-size: 14px;">Result Sev</th>
+                <th style="font-size: 14px;">Result Occ</th>
+                <th style="font-size: 14px;">Result Det</th>
+                <th style="font-size: 14px;">Result RPN</th>
+
+            </tr>
+            <tr>
+                <td> 
+                  <input type="text" id="func1" name="func1">
+                </td>
+                <td> 
+                  <input type="text" id="mode1" name="mode1">
+                </td>
+                <td> 
+                  <input type="text" id="effect1" name="effect1">
+                </td>
+                <td> 
+                  <input type="text" id="sev1" name="sev1">
+                </td>
+                <td> 
+                  <input type="text" id="mech1" name="mech1">
+                </td>  
+                <td> 
+                  <input type="text" id="occcur1" name="occur1">
+                </td>
+                <td> 
+                  <input type="text" id="currrent1" name="current1">
+                </td>
+                <td> 
+                  <input type="text" id="detect1" name="detect1">
+                </td>
+                <td> 
+                  <input type="text" id="rpn1" name="rpn1">
+                </td>
+                <td>
+                  <textarea id="action1" name="action1" rows="4" cols="30">
+                  
+                    </textarea>
+                </td>
+                <td> 
+                  <input type="text" id="res1" name="res1">
+                </td>
+                <td> 
+                  <input type="date" id="targdt1" name="targdt1">
+                </td>
+                <td>
+                  <textarea id="actiontaken1" name="actiontaken1" rows="4" cols="30">
+                  
+                    </textarea>
+                </td>
+                <td> 
+                  <input type="text" id="ressev1" name="ressev1">
+                </td>
+                <td> 
+                  <input type="text" id="resocc1" name="resocc1">
+                </td>
+                <td> 
+                  <input type="text" id="resdet1" name="resdet1">
+                </td>
+                <td> 
+                  <input type="text" id="resrpn1" name="resrpn1">
+                </td>  
+            </tr>
+     
+
+          </table>
+          <table>
+            <tr >
+                  <td><button id="Submit" type="button" onclick="location.href='RootCause.html';">Submit</button></td>
+                  <td><button id="Cancel" type="button">Cancel</button></td>
+                  <td><button id="Help" type="button">Help</button></td>
+           </tr>       
+          </table>    
+  
+          <br>
+          <br>
+      </td>
+      </tr>
+    </table>
+  
+      
+  
+  <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+</body>
+</html>
